@@ -1,13 +1,11 @@
-import {networkAPI} from '../API/networkAPI'
+import { networkAPI } from "../API/networkAPI";
 
-const setNetwork = (networks) => ({type: 'SET_NETWORK',networks})
+const setNetwork = networks => ({ type: "SET_NETWORK", networks });
 
-
-export const getNetworks = (idCompany) => {
-    return(dispatch) => {
-        networkAPI.getNetwork(idCompany)
-            .then(networks => 
-                {   
-                    dispatch(setNetwork(networks.data))})
-    }
-}
+export const getNetworks = idCompany => {
+  return dispatch => {
+    networkAPI.getNetwork(idCompany).then(networks => {
+      dispatch(setNetwork(networks.data));
+    });
+  };
+};

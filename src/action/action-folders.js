@@ -17,3 +17,8 @@ export const getIndicators = (idCompany) => {
             .then(indicator => {dispatch(setIndicator(indicator))})
     }
 }
+
+
+export const showFolderCreator = (idFolder) => ({type:'SHOW_FOLDER_CREATOR',idFolder})
+
+export const updateNameFolder = (name) =>({type:'UPDATE_NAME_FOLDER',name})

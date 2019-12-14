@@ -4,7 +4,7 @@ let initialState = {
     password: '',
     idCompany: '',
     tokenOperator: '',
-    tokenAdmin: '',
+    position: '',
     isAuthOperator: false,
     isButtonClicked: false,
     loadingAuth: '',
@@ -89,6 +89,12 @@ const authData = (state = initialState, aciton) => {
                 ...state,
                 isButtonClicked: false
             }
+        case "SET_OPERATOR_POSITION":
+            
+            return{
+                ...state,
+                position: aciton.position
+            } 
         
         //___________________ LOGOUT _______________________
         case 'CLEAR_USER_ID':

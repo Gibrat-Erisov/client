@@ -21,6 +21,7 @@ function App() {
         <Route exact path='/chart1' component= { basicChart  } />
         <Route exact path='/chart2' component= { brushChart  } />
         <Route exact path='/column' component= { column  } />
+        
         <Route  path='*' render = {() => <div className='ErrorText'><p>404 error</p></div>} />
       </Switch>
     </>

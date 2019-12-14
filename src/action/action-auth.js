@@ -12,6 +12,8 @@ const operatorLogIn = () => ({type:'SET_AUTH_OPERATOR'})
 export const updateErrorAuth = (text) => ({type:'UPDATAE_ERROR_AUTH', text})
 const setIdCompany = (id) => ({type: 'SET_ID_COMPANY', id})
 const setIdOperator = (id) => ({type: 'SET_ID_OPERATOR', id})
+const setOperatorPosition = (position) => ({type:'SET_OPERATOR_POSITION',position})
+
 export const setButtonClickedTrue = () => ({type:'SET_BUTTON_CLICKED_TRUE'})
 export const setButtonClickedFalse = () => ({type:'SET_BUTTON_CLICKED_FALSE'})
 
@@ -23,6 +25,8 @@ export const gatOperator = (email,password) => {
                 dispatch(updataTokeOperator(dataAll.data.tokenOperator))
                 dispatch(setIdCompany(dataAll.data.user.idCompany))
                 dispatch(setIdOperator(dataAll.data.user._id))
+                dispatch(setIdOperator(dataAll.data.user._id))
+                dispatch(setOperatorPosition(dataAll.data.user.position))
                 dispatch(operatorLogIn())
                 dispatch(updateErrorAuth(''))
                 
